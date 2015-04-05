@@ -1,6 +1,6 @@
 class Pokemon < ActiveRecord::Base
-	valideates :name, presence: true, uniqueness: true
-	belongs_to: trainer
+	validates :name, presence: true, uniqueness: true
+	belongs_to :trainer
 
 	def add_exp(exp)
 		self.experience += exp
